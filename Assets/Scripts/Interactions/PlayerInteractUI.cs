@@ -1,4 +1,7 @@
 using UnityEngine;
+using TMPro; 
+using System.Collections; 
+using System.Collections.Generic; 
 
 public class PlayerInteractUI : MonoBehaviour
 {
@@ -7,12 +10,15 @@ public class PlayerInteractUI : MonoBehaviour
 
     [SerializeField]
     private PlayerInteract playerInteract;
+    
+    [SerializeField]
+    private TextMeshProUGUI interactTextMeshProUGUI;
 
     private void Update()
     {
         if (playerInteract.GetInteractableObject() != null)
         {
-            Show();
+            Show(playerInteract.GetInteractableObject());
         }
         else
         {
@@ -20,9 +26,10 @@ public class PlayerInteractUI : MonoBehaviour
         }
     }
 
-    private void Show()
+    private void Show(NPCInteractable npcInteractable)
     {
         containerGameObject.SetActive(true);
+        interactTextMeshProUGUI.text = npcInteractable.GetInteractText(); 
 
     }
 

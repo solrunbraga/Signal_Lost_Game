@@ -1,7 +1,11 @@
 using UnityEngine;
+using System.Collections; 
+using System.Collections.Generic; 
 
 public class NPCInteractable : MonoBehaviour
 {
+    [SerializeField]
+    private string interactText; 
     private Animator animator; 
 
     private void Awake()
@@ -16,4 +20,11 @@ public class NPCInteractable : MonoBehaviour
         animator.SetTrigger("Talk"); 
 
     }
+
+    public string GetInteractText()
+    {
+        return interactText; 
+    }
+
+
 }

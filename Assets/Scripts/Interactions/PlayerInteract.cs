@@ -22,16 +22,34 @@ public class PlayerInteract : MonoBehaviour
 
     public NPCInteractable GetInteractableObject()
     {
+        List<NPCInteractable> npcInteractableList = new List<NPCInteractable>(); 
         float interactRange = 1f; 
         Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange); 
         foreach (Collider collider in colliderArray)
         {
             if (collider.TryGetComponent(out NPCInteractable npcInteractable))
                 {
-                    return npcInteractable; 
+                    npcInteractableList.Add(npcInteractable);
                 }
         }
-        return null; 
+        
+        NPCInteractable closestNPCInteractable = null; 
+        foreach (NPCInteractable npcInteractable in npcInteractableList)
+        {
+            if (closestNPCInteractable == null)
+            {
+                closestNPCInteractable = npcInteractable; 
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, npcInteractable.transform.position) < Vector3.Distance(transform.position, closestNPCInteractable.transform.position))
+                {
+                    //Closer
+                    closestNPCInteractable = npcInteractable; 
+                }
+            }
+        }
+        return closestNPCInteractable; 
             
     }
 }
