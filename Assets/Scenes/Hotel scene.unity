@@ -826,7 +826,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0b370e01cda840a45982c117ac706827, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e3f37bbdd8630bd4c8a1c6c4311b5a55, type: 2}
+      objectReference: {fileID: 2100000, guid: f8cc811aa63859f428d4cdc7f0e27cee, type: 2}
     - target: {fileID: 919132149155446097, guid: 0b370e01cda840a45982c117ac706827, type: 3}
       propertyPath: m_Name
       value: lamp_001
@@ -1015,7 +1015,7 @@ PrefabInstance:
     - target: {fileID: 5217175970542719518, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c411f35c4d8055544808b103209a7d76, type: 2}
+      objectReference: {fileID: 2100000, guid: f8cc811aa63859f428d4cdc7f0e27cee, type: 2}
     - target: {fileID: 6010015870242829259, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: m_Name
       value: Column_A_01_Prefab (1)
@@ -8151,7 +8151,7 @@ PrefabInstance:
     - target: {fileID: 5217175970542719518, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c411f35c4d8055544808b103209a7d76, type: 2}
+      objectReference: {fileID: 2100000, guid: f8cc811aa63859f428d4cdc7f0e27cee, type: 2}
     - target: {fileID: 6010015870242829259, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: m_Name
       value: Column_A_01_Prefab (3)
@@ -10717,7 +10717,7 @@ PrefabInstance:
     - target: {fileID: 5217175970542719518, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c411f35c4d8055544808b103209a7d76, type: 2}
+      objectReference: {fileID: 2100000, guid: f8cc811aa63859f428d4cdc7f0e27cee, type: 2}
     - target: {fileID: 6010015870242829259, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: m_Name
       value: Column_A_01_Prefab (2)
@@ -13961,7 +13961,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0b370e01cda840a45982c117ac706827, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e3f37bbdd8630bd4c8a1c6c4311b5a55, type: 2}
+      objectReference: {fileID: 2100000, guid: f8cc811aa63859f428d4cdc7f0e27cee, type: 2}
     - target: {fileID: 919132149155446097, guid: 0b370e01cda840a45982c117ac706827, type: 3}
       propertyPath: m_Name
       value: lamp_001 (1)
@@ -15489,7 +15489,7 @@ PrefabInstance:
     - target: {fileID: 5217175970542719518, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c411f35c4d8055544808b103209a7d76, type: 2}
+      objectReference: {fileID: 2100000, guid: f8cc811aa63859f428d4cdc7f0e27cee, type: 2}
     - target: {fileID: 6010015870242829259, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: m_Name
       value: Column_A_01_Prefab (4)
@@ -17147,7 +17147,7 @@ PrefabInstance:
     - target: {fileID: 6661417268077823860, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 82f12a4ef0dbc6b429a6227cd86ce2be, type: 2}
+      objectReference: {fileID: 2100000, guid: f8cc811aa63859f428d4cdc7f0e27cee, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18225,7 +18225,7 @@ PrefabInstance:
     - target: {fileID: 5217175970542719518, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c411f35c4d8055544808b103209a7d76, type: 2}
+      objectReference: {fileID: 2100000, guid: f8cc811aa63859f428d4cdc7f0e27cee, type: 2}
     - target: {fileID: 6010015870242829259, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: m_Name
       value: Column_A_01_Prefab (5)
@@ -18596,7 +18596,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ac89d7fea237f1645ad740a0eddafeea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 399016a51c93e984eac130563ebe47a0, type: 2}
+      objectReference: {fileID: 2100000, guid: f8cc811aa63859f428d4cdc7f0e27cee, type: 2}
     - target: {fileID: 919132149155446097, guid: ac89d7fea237f1645ad740a0eddafeea, type: 3}
       propertyPath: m_Name
       value: coffee_table_001
@@ -19877,7 +19877,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055239477258752902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac4a5e5499530a4aac501d4c6288984, type: 3}
   m_Name: 

@@ -1,4 +1,6 @@
 ﻿<Solution>
+  <Project Path="Ink-Libraries.csproj" />
+  <Project Path="InkEditor.csproj" />
   <Project Path="FMODUnityResonanceEditor.csproj" />
   <Project Path="FMODUnityEditor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
