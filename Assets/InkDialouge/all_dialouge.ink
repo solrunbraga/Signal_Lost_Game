@@ -1,15 +1,18 @@
 -> Beginning
 
 === Beginning ===
-//fist conversation with sister in bedroom 
 Hey, It's been a long day. Im going to bed now. I'll see you tomorrow right? #speaker: Sasha
-    *[Yeah, See you tomorrow. Good Night.]
-        Good night! #speaker : Sasha
-        -> DONE
+    * [Yeah, See you tomorrow. Good Night.]
+        -> GoodNight
     * [Why are you going to bed this early?]
-        I'm tierd Lucy. Good night. #speaker: Sasha
-        -> DONE
-        
+        -> TiredNight
+
+=== GoodNight ===
+Good night! #speaker: Sasha
+-> END
+
+=== TiredNight ===
+I'm tired Lucy. Good night. #speaker: Sasha
 -> END
 //player goes to bed 
 
