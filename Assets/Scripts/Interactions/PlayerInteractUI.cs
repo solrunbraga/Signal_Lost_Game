@@ -16,6 +16,13 @@ public class PlayerInteractUI : MonoBehaviour
 
     private void Update()
     {
+        // hide UI if dialogue is active 
+        if (DialogueManager.GetInstance().IsDialogueActive())
+        {
+            //skipping UI during Dialogue
+            Hide(); 
+            return; 
+        }
         if (playerInteract.GetInteractableObject() != null)
         {
             Show(playerInteract.GetInteractableObject());
