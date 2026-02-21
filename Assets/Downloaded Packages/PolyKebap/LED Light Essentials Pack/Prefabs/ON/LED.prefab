@@ -83,6 +83,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1573685329632193101, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181268409433784314, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132837822829924478, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201141555410486125, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308910983579681018, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5980476313350262425, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
       propertyPath: m_Name
       value: LED_Light_6 (3)
@@ -91,6 +111,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34c7488ca1960fa49bfb961abaa609de, type: 2}
+    - target: {fileID: 8287212050685770092, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -149,9 +173,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1573685329632193101, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2911046793103134508, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181268409433784314, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132837822829924478, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201141555410486125, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308910983579681018, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5980476313350262425, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
       propertyPath: m_Name
@@ -175,6 +219,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8287212050685770092, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
       propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287212050685770092, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -235,6 +283,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1573685329632193101, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181268409433784314, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132837822829924478, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201141555410486125, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308910983579681018, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5980476313350262425, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
       propertyPath: m_Name
       value: LED_Light_6 (2)
@@ -243,6 +311,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34c7488ca1960fa49bfb961abaa609de, type: 2}
+    - target: {fileID: 8287212050685770092, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -301,6 +373,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1573685329632193101, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181268409433784314, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132837822829924478, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201141555410486125, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308910983579681018, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5980476313350262425, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
       propertyPath: m_Name
       value: LED_Light_6 (4)
@@ -309,6 +401,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34c7488ca1960fa49bfb961abaa609de, type: 2}
+    - target: {fileID: 8287212050685770092, guid: ceb85e8e70fedc94ab3f80285688d983, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
