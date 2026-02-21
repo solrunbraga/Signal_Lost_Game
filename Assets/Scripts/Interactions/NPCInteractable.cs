@@ -12,6 +12,8 @@ public class NPCInteractable : MonoBehaviour
     private TextAsset inkJSON; //ink story 
     private Animator animator; 
 
+    
+
     private void Awake()
     {
         animator = GetComponent<Animator>(); 

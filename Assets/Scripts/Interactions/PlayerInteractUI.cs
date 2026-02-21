@@ -14,6 +14,7 @@ public class PlayerInteractUI : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI interactTextMeshProUGUI;
 
+
     private void Update()
     {
         // hide UI if dialogue is active 
