@@ -82,9 +82,10 @@ public class DialogueManager : MonoBehaviour
         
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON, string knotName)
     {
         currentStory = new Story(inkJSON.text); 
+        currentStory.ChoosePathString(knotName); //start from a specific knot in the ink story file
         dialougeIsPlaying = true; 
         dialougePanel.SetActive(true); 
         
@@ -98,6 +99,11 @@ public class DialogueManager : MonoBehaviour
         dialougeIsPlaying = false; 
         dialougePanel.SetActive(false); 
         dialougeText.text = ""; 
+        displayNameText.text = "";
+        foreach (var choice in choices)
+        {
+            choice.SetActive(false);
+        }
 
     }
 
@@ -170,6 +176,19 @@ public class DialogueManager : MonoBehaviour
             choices[index].gameObject.SetActive(true); 
             choicesText[index].text = choice.text; 
             index++; 
+        }
+        for (int i = 0; i < currentChoices.Count; i++)
+        {
+            int choiceIndex = i; // Capture variable for closure
+            choices[i].SetActive(true);
+            choicesText[i].text = currentChoices[i].text;
+
+            // Remove previous listeners if any
+            UnityEngine.UI.Button button = choices[i].GetComponent<UnityEngine.UI.Button>();
+            button.onClick.RemoveAllListeners();
+
+            // Add new listener
+            button.onClick.AddListener(() => MakeChoice(choiceIndex));
         }
         // go through the remaining choices the UI supports and make sure they are hidden 
         for (int i = index; i < choices.Length; i++)
