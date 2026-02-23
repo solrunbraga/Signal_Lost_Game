@@ -15,8 +15,6 @@ public class NPCInteractable : MonoBehaviour
     private string npcKnotName; // assign in inspector
     private Animator animator; 
 
-    
-
     private void Awake()
     {
         animator = GetComponent<Animator>(); 

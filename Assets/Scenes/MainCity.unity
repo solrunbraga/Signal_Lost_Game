@@ -14635,7 +14635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
   interactText: Talk to the boy
   inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
-  npcKnotName: 
+  npcKnotName: YoungBoy
 --- !u!4 &614514607 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6367566384277174298, guid: 87a7b985b15a4244091de35d7df9169a, type: 3}
