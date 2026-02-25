@@ -1,16 +1,15 @@
 
 
 === Beginning ===
-Hey, It's been a long day. Im going to bed now. I'll see you tomorrow right? #speaker: Sasha
-    * [Yeah, See you tomorrow. Good Night.]
-        Good night! #speaker : Sasha
-            ->END
-    * [Why are you going to bed this early?]
-        I'm tierd Lucy, long day tomorrow. Good night.#speaker : Sasha
-                **[What is happening tomorrow?]
-                    Oh, nothing. Nevermind. #speaker: Sasha 
-                        ->END
-
+Hey, it's been a long day. I'm going to bed now. I'll see you tomorrow, right? #speaker:Sasha
+* [Yeah, see you tomorrow. Good night.]
+    Good night! #speaker:Sasha
+    -> END
+* [Why are you going to bed this early?]
+    I'm tired, Lucy. Long day tomorrow. Night. #speaker:Sasha
+    ** [What is happening tomorrow?]
+        Oh, nothing. Never mind. #speaker:Sasha
+        -> END
 
 //player goes to bed 
 
@@ -19,16 +18,21 @@ Hey, It's been a long day. Im going to bed now. I'll see you tomorrow right? #sp
 
 ===Ghost===
 //player meets ghost outside hotel
-Hello, how can I help you? #speaker: Ghost
-*[I'm looking for my sister have you seen her?]
-    What does your sister look like?#speaker: Ghost
-    **[Short dark hair and green eyes.] 
-            Ahh her, yes I saw her a few hours ago.#speaker: Ghost
-        ***[Did you see where she went?] 
-                I saw her walk to the park.#speaker: Ghost 
-                ->END
-*[I don't need any help.] 
-    ->END
+Hello, how can I help you? #speaker:Ghost
+
+* [I'm looking for my sister. Have you seen her?]
+    What does your sister look like? #speaker:Ghost
+
+    ** [Short dark hair and green eyes.]
+        Ahh, her. Yes, I saw her a few hours ago. #speaker:Ghost
+
+        *** [Did you see where she went?]
+            I saw her walk to the park. #speaker:Ghost
+            -> END
+
+* [I don't need any help.]
+    Very well. #speaker:Ghost
+    -> END
 
 //player now starts to look for clues
 

@@ -22,6 +22,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject[] choices; 
 
+    [SerializeField]
+    private MonoBehaviour playerMovementScript; 
+
     private TextMeshProUGUI[] choicesText; 
 
     private Story currentStory; 
@@ -75,15 +78,18 @@ public class DialogueManager : MonoBehaviour
         }
 
         //handle continue to next line of dialouge when E is pressed
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space) && currentStory.currentChoices.Count == 0)
         {
-            ContinueStory(); 
+            ContinueStory();
         }
         
     }
 
     public void EnterDialogueMode(TextAsset inkJSON, string knotName)
     {
+        //disable movement during dialogue
+        playerMovementScript.enabled = false;
+
         currentStory = new Story(inkJSON.text); 
         currentStory.ChoosePathString(knotName); //start from a specific knot in the ink story file
         dialougeIsPlaying = true; 
@@ -94,6 +100,10 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ExitDialogueMode()
     {
+        //enable movement after dialouge ends 
+        playerMovementScript.enabled = true;
+
+        Debug.Log("Exiting dialouge");
         yield return new WaitForSeconds(0.2f); 
 
         dialougeIsPlaying = false; 
@@ -160,47 +170,48 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayChoices()
     {
-        List<Choice> currentChoices = currentStory.currentChoices; 
-        currentChoiceCount = currentChoices.Count; 
+        List<Choice> currentChoices = currentStory.currentChoices;
+        currentChoiceCount = currentChoices.Count;
 
-        //chacking if UI can support the number of choices coming in 
-        if(currentChoices.Count > choices.Length)
+        // Hide all choice buttons first
+        for (int i = 0; i < choices.Length; i++)
         {
-            Debug.LogError("More choices where given than the UI can support. number of choices given;" + currentChoices.Count); 
+            choices[i].SetActive(false);
         }
 
-        int index = 0; 
-        //enable and initialize the choices to the amount in the ink story 
-        foreach (Choice choice in currentChoices)
+        // If no choices, stop here
+        if (currentChoiceCount == 0)
         {
-            choices[index].gameObject.SetActive(true); 
-            choicesText[index].text = choice.text; 
-            index++; 
+            return;
         }
-        for (int i = 0; i < currentChoices.Count; i++)
+
+        if (currentChoiceCount > choices.Length)
         {
-            int choiceIndex = i; // Capture variable for closure
+            Debug.LogError("More choices were given than the UI can support. Number of choices: " + currentChoiceCount);
+        }
+
+        for (int i = 0; i < currentChoiceCount; i++)
+        {
+            int choiceIndex = i;
+
             choices[i].SetActive(true);
             choicesText[i].text = currentChoices[i].text;
 
-            // Remove previous listeners if any
             UnityEngine.UI.Button button = choices[i].GetComponent<UnityEngine.UI.Button>();
             button.onClick.RemoveAllListeners();
-
-            // Add new listener
             button.onClick.AddListener(() => MakeChoice(choiceIndex));
         }
-        // go through the remaining choices the UI supports and make sure they are hidden 
-        for (int i = index; i < choices.Length; i++)
-        {
-            choices[i].gameObject.SetActive(false); 
-        }
-        
-        StartCoroutine(SelectFirstChoice()); 
+
+        StartCoroutine(SelectFirstChoice());
     }
 
     private IEnumerator SelectFirstChoice()
     {
+        if (currentChoiceCount == 0)
+        {
+            yield break; 
+        }
+
         EventSystem.current.SetSelectedGameObject(null); 
         yield return new WaitForEndOfFrame(); 
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject); 
@@ -208,6 +219,12 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
+        if (currentStory.currentChoices.Count == 0)
+        {
+            Debug.LogWarning("tried to choose but no choices exist."); 
+            return; 
+        }
+
         if (choiceIndex < 0 || choiceIndex >= currentChoiceCount)
         {
             Debug.LogError("Choice index out of range: " + choiceIndex); 
@@ -217,8 +234,4 @@ public class DialogueManager : MonoBehaviour
         ContinueStory(); 
     }
 
-    public void OnChoiceButtonClicked(int index)
-    {
-        DialogueManager.GetInstance().MakeChoice(index);
-    }
 }

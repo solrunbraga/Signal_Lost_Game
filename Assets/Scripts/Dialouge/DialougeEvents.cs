@@ -14,4 +14,34 @@ public class DialougeEvents
             onEnterDialouge(knotName); 
         }
     }
+
+    public event Action onDialogueStarted; 
+
+    public void DialougeStarted()
+    {
+        if (onDialogueStarted != null)
+        {
+            onDialogueStarted(); 
+        }
+    }
+
+    public event Action onDialogueFinished; 
+
+    public void DialogueFinished()
+    {
+        if (onDialogueFinished != null)
+        {
+            onDialogueFinished();   
+        }
+    }
+
+    public event Action<string> onDisplayDialogue; 
+
+    public void DisplayDialogue(string dialogueLine)
+    {
+        if (onDisplayDialogue != null)
+        {
+            onDisplayDialogue(dialogueLine); 
+        }
+    }
 }

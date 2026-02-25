@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: f085f3801ff36554c80f3fd9a11f5451
   - enabled: 1
-    path: Assets/Scenes/Hotel scene.unity
+    path: Assets/Scenes/HotelScene.unity
     guid: b819ca3306076a04aadf5c7bd4ab4b4e
   - enabled: 1
     path: Assets/Scenes/MainCity.unity

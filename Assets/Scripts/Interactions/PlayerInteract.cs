@@ -6,15 +6,22 @@ public class PlayerInteract : MonoBehaviour
 {
     private void Update()
     {
+        //prevent interacting when dialogue is active 
+        if (DialogueManager.GetInstance().IsDialogueActive())
+        {
+            return; 
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             float interactRange = 1f;
-            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange); 
+            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
                 if (collider.TryGetComponent(out NPCInteractable npcInteractable))
                 {
                     npcInteractable.Interact(); 
+                    break; //stop after first npc 
                 }
             }
         }
