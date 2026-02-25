@@ -22,6 +22,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject[] choices; 
 
+    [Header("Ink JSON")]
+    [SerializeField] 
+    private TextAsset inkJSON;
+
     [SerializeField]
     private MonoBehaviour playerMovementScript; 
 
@@ -36,6 +40,8 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker"; 
 
     private int currentChoiceCount = 0; 
+
+    public GameObject itemToReveal; 
 
     private void Awake()
     {
@@ -55,6 +61,10 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        currentStory = new Story(inkJSON.text);
+        //quest item not active 
+        itemToReveal.SetActive(false); 
+
         dialougeIsPlaying = false; 
         dialougePanel.SetActive(false); 
 
@@ -85,12 +95,11 @@ public class DialogueManager : MonoBehaviour
         
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON, string knotName)
+    public void EnterDialogueMode(string knotName)
     {
         //disable movement during dialogue
         playerMovementScript.enabled = false;
 
-        currentStory = new Story(inkJSON.text); 
         currentStory.ChoosePathString(knotName); //start from a specific knot in the ink story file
         dialougeIsPlaying = true; 
         dialougePanel.SetActive(true); 
@@ -234,4 +243,8 @@ public class DialogueManager : MonoBehaviour
         ContinueStory(); 
     }
 
+    public void ObserveVariable(string variableName, Story.VariableObserver callback)
+    {
+        currentStory.ObserveVariable(variableName, callback);
+    }
 }

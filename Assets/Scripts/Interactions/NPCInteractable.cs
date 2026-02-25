@@ -7,9 +7,6 @@ public class NPCInteractable : MonoBehaviour
 {
     [SerializeField]
     private string interactText; 
-    [Header("Ink JSON")]
-    [SerializeField]
-    private TextAsset inkJSON; //ink story 
 
     [SerializeField]
     private string npcKnotName; // assign in inspector
@@ -26,7 +23,7 @@ public class NPCInteractable : MonoBehaviour
 
         animator.SetTrigger("Talk"); 
         //start the dialouge from specific knot in story
-        DialogueManager.GetInstance().EnterDialogueMode(inkJSON, npcKnotName); 
+        DialogueManager.GetInstance().EnterDialogueMode(npcKnotName); 
 
 
     }
