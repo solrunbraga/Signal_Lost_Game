@@ -4,17 +4,19 @@ VAR sister_photo_unlocked = false
 VAR key_unlocked = false 
 VAR mom_unlocked = false
 
-->OldLady
+->Doctor
+
 === Beginning ===
 Hey, it's been a long day. I'm going to bed now. I'll see you tomorrow, right? #speaker:Sasha
 * [Yeah, see you tomorrow. Good night.]
     Good night! #speaker:Sasha
-    -> END
+        -> END
+
 * [Why are you going to bed this early?]
     I'm tired, Lucy. Long day tomorrow. Night. #speaker:Sasha
     ** [What is happening tomorrow?]
         Oh, nothing. Never mind. #speaker:Sasha
-        -> END
+            -> END
 
 //player goes to bed 
 

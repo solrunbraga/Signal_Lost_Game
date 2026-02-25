@@ -16,6 +16,9 @@ public class Item : MonoBehaviour
     [TextArea]
     [SerializeField]
     private string itemDescription;
+
+    [SerializeField] 
+    private bool countsTowardUnlock = false;
     public GameObject guiObject;
     
 
@@ -35,7 +38,15 @@ public class Item : MonoBehaviour
             if (guiObject.activeSelf && Input.GetKeyDown(KeyCode.E))
             {
                 inventoryManager.AddItem(itemName, quantity, sprite, itemDescription);
+
+                if (countsTowardUnlock)
+                {
+                    inventoryManager.ItemCollected();
+                }
+
+
                 Destroy(gameObject); 
+                
                 guiObject.SetActive(false); 
             }
         }

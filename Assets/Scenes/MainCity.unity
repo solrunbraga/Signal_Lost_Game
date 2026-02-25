@@ -13509,7 +13509,9 @@ MonoBehaviour:
   choices:
   - {fileID: 502068887}
   - {fileID: 471840722}
+  inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
   playerMovementScript: {fileID: 877670957}
+  itemToReveal: {fileID: 337900862}
 --- !u!4 &318458447
 Transform:
   m_ObjectHideFlags: 0
@@ -13646,7 +13648,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
   interactText: Talk to ???
-  inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
   npcKnotName: 
 --- !u!1 &334808177
 GameObject:
@@ -13702,6 +13703,7 @@ GameObject:
   - component: {fileID: 337900867}
   - component: {fileID: 337900868}
   - component: {fileID: 337900869}
+  - component: {fileID: 337900870}
   m_Layer: 0
   m_Name: family photo
   m_TagString: Item
@@ -13890,6 +13892,19 @@ MonoBehaviour:
     - {x: 0.57735026, y: 0.57735026, z: -0.57735026}
     - {x: 0.57735026, y: 0.57735026, z: 0.57735026}
     - {x: 0.57735026, y: -0.57735026, z: 0.57735026}
+--- !u!114 &337900870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337900862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269280e45e7049e4eb2cb329f7132b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemToReveal
+  inkVariableName: family_photo_unlocked
 --- !u!1001 &339952045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15209,7 +15224,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
   interactText: Talk to the boy
-  inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
   npcKnotName: YoungBoy
 --- !u!4 &614514607 stripped
 Transform:
@@ -15353,8 +15367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
   interactText: 'Talk to old woman '
-  inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
-  npcKnotName: 
+  npcKnotName: OldLady
 --- !u!4 &631556208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4863337474644278, guid: 2b0ce350e0de73243849374642b19e32, type: 3}
@@ -15653,6 +15666,7 @@ GameObject:
   - component: {fileID: 699306813}
   - component: {fileID: 699306812}
   - component: {fileID: 699306811}
+  - component: {fileID: 699306815}
   m_Layer: 5
   m_Name: ItemPickUp Canvas
   m_TagString: Untagged
@@ -15743,6 +15757,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &699306815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699306810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf96cace36c3f7041a954090024e02c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPreviewUI
 --- !u!1001 &706789781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18047,6 +18073,7 @@ GameObject:
   - component: {fileID: 1018798941}
   - component: {fileID: 1018798940}
   - component: {fileID: 1018798946}
+  - component: {fileID: 1018798947}
   m_Layer: 0
   m_Name: 'mom and random man photo '
   m_TagString: Item
@@ -18236,6 +18263,19 @@ MonoBehaviour:
     - {x: 0.57735026, y: 0.57735026, z: -0.57735026}
     - {x: 0.57735026, y: 0.57735026, z: 0.57735026}
     - {x: 0.57735026, y: -0.57735026, z: 0.57735026}
+--- !u!114 &1018798947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018798939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269280e45e7049e4eb2cb329f7132b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemToReveal
+  inkVariableName: mom_unlocked
 --- !u!1001 &1020852707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24342,7 +24382,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
   interactText: Talk to doctor
-  inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
   npcKnotName: 
 --- !u!1 &1189990136 stripped
 GameObject:
@@ -25130,8 +25169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
   interactText: Talk to Cop
-  inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
-  npcKnotName: 
+  npcKnotName: Cop
 --- !u!65 &1263303431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27853,7 +27891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1704390571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27893,7 +27931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e6aaeef7a432bd94b847074027832683, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -29786,7 +29824,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
   interactText: Talk to Ghost
-  inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
   npcKnotName: Ghost
 --- !u!95 &1949586651
 Animator:

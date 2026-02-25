@@ -2978,6 +2978,7 @@ MonoBehaviour:
   choices:
   - {fileID: 912683133}
   - {fileID: 198982721}
+  inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
   playerMovementScript: {fileID: 1580696544}
 --- !u!1001 &225866623
 PrefabInstance:
@@ -26186,7 +26187,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
   interactText: Talk with Sasha
-  inkJSON: {fileID: 4900000, guid: 0840ac731567eef4e8311c90705fca8a, type: 3}
   npcKnotName: Beginning
 --- !u!114 &1767482450
 MonoBehaviour:
@@ -26203,7 +26203,7 @@ MonoBehaviour:
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
-  precomputeOutline: 0
+  precomputeOutline: 1
   bakeKeys: []
   bakeValues: []
 --- !u!1001 &1774739254

@@ -7,6 +7,10 @@ public class InventoryManager : MonoBehaviour
     public GameObject InventoryMenu; 
     private bool menuActivated; 
     public ItemSlot[] itemSlot;
+    public GameObject lastItem; //last item to reveal 
+
+    private int itemsCollected = 0; 
+    public int itemsNeeded = 4; //items requierd
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,6 +55,26 @@ public class InventoryManager : MonoBehaviour
         {
             itemSlot[i].selectedShader.SetActive(false);
             itemSlot[i].thisItemSelected = false;
+        }
+    }
+
+    public void ItemCollected()
+    {
+        itemsCollected++;
+        Debug.Log("items collected: " + itemsCollected); 
+
+        if(itemsCollected >= itemsNeeded)
+        {
+            RevealLastItem();
+        }
+    }
+
+    private void RevealLastItem()
+    {
+        if(lastItem != null)
+        {
+            lastItem.SetActive(true); // The player can now pick it up
+            Debug.Log("Last item is now revealed!");
         }
     }
 }

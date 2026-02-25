@@ -41,8 +41,6 @@ public class DialogueManager : MonoBehaviour
 
     private int currentChoiceCount = 0; 
 
-    public GameObject itemToReveal; 
-
     private void Awake()
     {
         if(instance != null)
@@ -63,7 +61,7 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory = new Story(inkJSON.text);
         //quest item not active 
-        itemToReveal.SetActive(false); 
+        
 
         dialougeIsPlaying = false; 
         dialougePanel.SetActive(false); 
