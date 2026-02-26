@@ -487,9 +487,12 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - Master
+  - master
   Banks:
-  - Nature
+  - City
+  - 'Music city '
+  - Player
+  - UI
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

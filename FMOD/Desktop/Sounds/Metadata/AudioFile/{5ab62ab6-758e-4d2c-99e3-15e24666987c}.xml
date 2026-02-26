@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{5ab62ab6-758e-4d2c-99e3-15e24666987c}">
+		<property name="assetPath">
+			<value>falling-small-leaves.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>70.147729166666664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{96d68100-8981-43ac-8847-4ac7cca599dd}</destination>
+		</relationship>
+	</object>
+</objects>

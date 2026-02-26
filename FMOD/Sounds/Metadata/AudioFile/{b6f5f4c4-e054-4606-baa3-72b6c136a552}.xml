@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{b6f5f4c4-e054-4606-baa3-72b6c136a552}">
+		<property name="assetPath">
+			<value>tunetank-futuristic-chiil-beat-409346.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>126.04081632653062</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{96d68100-8981-43ac-8847-4ac7cca599dd}</destination>
+		</relationship>
+	</object>
+</objects>

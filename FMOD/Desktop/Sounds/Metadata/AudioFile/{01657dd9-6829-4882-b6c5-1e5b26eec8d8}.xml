@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{01657dd9-6829-4882-b6c5-1e5b26eec8d8}">
+		<property name="assetPath">
+			<value>neon-lights-flicker-bathroom.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>30.968666666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{96d68100-8981-43ac-8847-4ac7cca599dd}</destination>
+		</relationship>
+	</object>
+</objects>
