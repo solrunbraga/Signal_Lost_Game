@@ -1,10 +1,8 @@
-VAR talked_to_npc = false
 VAR family_photo_unlocked = false
 VAR sister_photo_unlocked = false
-VAR key_unlocked = false 
 VAR mom_unlocked = false
 
-->Doctor
+
 
 === Beginning ===
 Hey, it's been a long day. I'm going to bed now. I'll see you tomorrow, right? #speaker:Sasha
@@ -103,5 +101,55 @@ Oh darling are you alright? You look stressed... #speaker:Old Lady
         **[I'm just looking for someone]
             Well I hope you find them, maybe they will be back later darling.#speaker:Old Lady
             ->END 
+
+
+=== Doctor ===
+Well hello there, you are Sasha's sister right? #speaker : Doctor
+    *[Hello Dr, been a while]
+        Yes it has, how are you holding up? #speaker : Doctor
+            **[I've been better]
+                Understandable, the news must have been a lot to procces. #speaker : Doctor
+                    ***[News?]
+                        Yes, from Sasha's paternity test. That you two don't share the same dad. Must have been hard to hear, since you two are so close. #speaker : Doctor
+                            ****[Right ... ]
+                                Anyways I when you see her, tell her I said she should come see me soon. #speaker : Doctor
+                                ->END
+    *[Yes, have you seen her lately?]
+        You know I can't discuss patient matters with you, even if you are her sister. #speaker : Doctor
+            **[Right, she wasn't in our room when I woke up]
+                Well, I don't think she ran away. Maybe she left you a message somewhere. #speaker : Doctor 
+                    ***[Nothing I have found]
+                        Maybe you are looking in the wrong places. #speaker : Doctor
+                            ->END
+
+=== SashasFriend === 
+Little Lucy! Long time no see! #speaker : Cloe
+
+*[Hey Cloe, how have you been?]
+    Oh you know, just living life. How is Sasha doing? #speaker : Cloe
+        **[Wish I could tell you]
+            Well I know how she has been anyways, she tells me things that not even you know. #speaker : Cloe
+                ***[What do you mean?]
+                    Girl, there are things you only tell your friends and not siblings. #speaker : Cloe 
+                        ****[I get it you guys are close]
+                            Calm it with the attitude, just face it you guys might not be as close as you think. #speaker : Cloe 
+                            ->END
+                        ****[Have you seen her today?]
+                            Maybe, maybe not. But she did tell me to tell you "Not to look for her" Do with that as you please. #speaker : Cloe
+                            ->END
+
+*[Hey, you know no one calls me that]
+    Well, to me you will always be Little Lucy, Sasha's little sister. #speaker : Cloe 
+        **[Yeah, whatever. Have you seen her?]
+            Since you are her little sister I will tell you. I talked to her a few days ago, but have not seen her today if that is what you are asking. #speaker : Cloe
+                ***[What did you talk about?]
+                    Not much, just catching up. But she said she would leave you some clues, whatever that means. #speaker : Cloe
+                        ****[Clues?]
+                            Well you know how much that girl loves mysteries. Maybe you should think like her and you will figure something out. #speaker : Cloe
+                            ->END
+                ***[So you haven't seen her today?]
+                    Nope, If you are looking for her, maybe try to find some clues. That girl does love a mystery. #speaker : Cloe
+                    ->END
+
 
 

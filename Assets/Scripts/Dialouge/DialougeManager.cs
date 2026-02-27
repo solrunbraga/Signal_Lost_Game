@@ -26,6 +26,14 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] 
     private TextAsset inkJSON;
 
+    [Header("Typing settings")] //typing speed and text anim
+    [SerializeField]
+    private float typingSpeed = 0.05f; 
+    private Coroutine typingCoroutine; 
+    private bool isTyping = false; 
+    private string currentLine; 
+
+
     [SerializeField]
     private MonoBehaviour playerMovementScript; 
 
@@ -85,10 +93,21 @@ public class DialogueManager : MonoBehaviour
             return; 
         }
 
-        //handle continue to next line of dialouge when E is pressed
-        if (Input.GetKeyDown(KeyCode.Space) && currentStory.currentChoices.Count == 0)
+        //handle continue to next line of dialouge when space is pressed anc animate text
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            ContinueStory();
+            if (isTyping)
+            {
+                //skip typing and finish line 
+                StopCoroutine(typingCoroutine);
+                dialougeText.text = currentLine; 
+                isTyping = false; 
+                DisplayChoices(); 
+            }
+            else if (currentStory.currentChoices.Count == 0)
+            {
+                ContinueStory(); 
+            }
         }
         
     }
@@ -129,15 +148,50 @@ public class DialogueManager : MonoBehaviour
          if (currentStory.canContinue)
         {
             //set text for current dialouge
-            dialougeText.text = currentStory.Continue(); 
-            //display choices, if any, for this dialouge line 
-            DisplayChoices(); 
+            currentLine = currentStory.Continue(); 
             //handle Names
             HandleTags(currentStory.currentTags); 
+
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine); 
+            }
+
+            typingCoroutine = StartCoroutine(TypeLine(currentLine));
         }
         else
         {
             StartCoroutine(ExitDialogueMode()); 
+        }
+    }
+
+    //typewriter effect for dialouge text
+    private IEnumerator TypeLine(string line)
+    {
+        isTyping = true; 
+
+        //hidde all choice buttons while text in animating 
+        HideChoices(); 
+
+        dialougeText.text = ""; 
+
+        foreach (char letter in line.ToCharArray())
+        {
+            dialougeText.text += letter; 
+            yield return new WaitForSeconds(typingSpeed); 
+        }
+
+        isTyping = false; 
+
+        //now the choices will show if there are any 
+        DisplayChoices(); 
+    }
+
+    private void HideChoices()
+    {
+        foreach (GameObject choice in choices)
+        {
+            choice.SetActive(false); 
         }
     }
 
@@ -179,6 +233,9 @@ public class DialogueManager : MonoBehaviour
     {
         List<Choice> currentChoices = currentStory.currentChoices;
         currentChoiceCount = currentChoices.Count;
+
+        //always hide first (safety)
+        HideChoices(); 
 
         // Hide all choice buttons first
         for (int i = 0; i < choices.Length; i++)

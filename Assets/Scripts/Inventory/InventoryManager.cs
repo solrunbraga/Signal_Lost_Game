@@ -6,8 +6,24 @@ public class InventoryManager : MonoBehaviour
 {
     public GameObject InventoryMenu; 
     private bool menuActivated; 
+    public static InventoryManager instance; 
     public ItemSlot[] itemSlot;
     public GameObject lastItem; //last item to reveal 
+    
+    
+
+     private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this; 
+            DontDestroyOnLoad(gameObject); //keep across scenes
+        }
+        else
+        {
+            Destroy(gameObject); // no dupes 
+        }
+    }
 
     private int itemsCollected = 0; 
     public int itemsNeeded = 4; //items requierd
@@ -76,5 +92,16 @@ public class InventoryManager : MonoBehaviour
             lastItem.SetActive(true); // The player can now pick it up
             Debug.Log("Last item is now revealed!");
         }
+    }
+
+    //check if player has the required item to interact with pc in room and end the game
+    public bool HasItem(string itemName)
+    {
+        foreach (ItemSlot slot in itemSlot)
+        {
+            if (slot.isFull && slot.itemName == itemName)
+                return true; 
+        }
+        return false;
     }
 }

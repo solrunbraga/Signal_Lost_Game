@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Item
+  - Concrete
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - Interactable
   - Item
   - Outline
-  - 
-  - 
+  - Concrete
+  - Ground
   - 
   - 
   - 
