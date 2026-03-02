@@ -56,14 +56,14 @@ ModelImporter:
       curves: []
       events:
       - time: 0.27117354
-        functionName: PlayWalkEvent
+        functionName: SelectAndPlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.7549111
-        functionName: PlayWalkEvent
+        functionName: SelectAndPlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

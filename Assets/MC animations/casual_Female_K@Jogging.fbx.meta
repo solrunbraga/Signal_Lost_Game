@@ -56,42 +56,42 @@ ModelImporter:
       curves: []
       events:
       - time: 0.1098434
-        functionName: PlayRunEvent
+        functionName: SelectAndPlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.26028138
-        functionName: PlayRunEvent
+        functionName: SelectAndPlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.43316966
-        functionName: PlayRunEvent
+        functionName: SelectAndPlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.58918196
-        functionName: PlayRunEvent
+        functionName: SelectAndPlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.73784876
-        functionName: PlayRunEvent
+        functionName: SelectAndPlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.91371274
-        functionName: PlayRunEvent
+        functionName: SelectAndPlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
