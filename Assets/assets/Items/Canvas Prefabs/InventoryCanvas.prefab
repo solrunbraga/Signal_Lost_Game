@@ -269,7 +269,6 @@ GameObject:
   - component: {fileID: 2859959672391982731}
   - component: {fileID: 755712218282375144}
   - component: {fileID: 1172684546015599460}
-  - component: {fileID: 5398572651929596027}
   m_Layer: 5
   m_Name: InventoryCanvas
   m_TagString: Untagged
@@ -388,19 +387,6 @@ MonoBehaviour:
   - {fileID: 1667656969893840581}
   lastItem: {fileID: 0}
   itemsNeeded: 4
---- !u!114 &5398572651929596027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586333479943293106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac4a5e5499530a4aac501d4c6288984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DontDestroy
-  objectIndex: 1
 --- !u!1 &5245983507021990119
 GameObject:
   m_ObjectHideFlags: 0

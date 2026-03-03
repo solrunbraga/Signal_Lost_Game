@@ -51,7 +51,7 @@ MonoBehaviour:
       Data2: 1206911458
       Data3: -1554562651
       Data4: 1307399928
-    Path: event:/CityAmbiance/lights flicker
+    Path: event:/SFX/CityAmbiance/lights flicker
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
