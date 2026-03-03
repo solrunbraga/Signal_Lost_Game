@@ -7,8 +7,15 @@ public class F_CharFst : MonoBehaviour
     private enum CURRENT_TERRAIN { CONCRETE };
     [SerializeField] 
     private CURRENT_TERRAIN currentTerrain;
+    
+    private StudioEventEmitter emit;
 
     private FMOD.Studio.EventInstance footsteps;
+
+    private void Start()
+    {
+        emit = GetComponent<StudioEventEmitter>();
+    }
 
     private void Update()
     {
@@ -47,10 +54,14 @@ public class F_CharFst : MonoBehaviour
 
     private void PlayFootstep(int terrain)
     {
-        footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Char/footsteps");
+        /*footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Char/footsteps");
         footsteps.setParameterByName("Terrain", terrain);
         footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         footsteps.start();
-        footsteps.release();
+        footsteps.release();*/
+
+        emit.SetParameter("Terrain", terrain);
+        //if (!emit.isPlaying()) //MAYBE
+            emit.Play();
     }
 }

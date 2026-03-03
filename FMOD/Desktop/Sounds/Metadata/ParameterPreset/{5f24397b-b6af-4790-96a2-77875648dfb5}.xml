@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="ParameterPreset" id="{5f24397b-b6af-4790-96a2-77875648dfb5}">
 		<property name="name">
-			<value>Last Clue</value>
+			<value>LastClue</value>
 		</property>
 		<relationship name="folder">
 			<destination>{993840e7-5572-46a4-a94c-df589045ea2a}</destination>

@@ -492,6 +492,7 @@ MonoBehaviour:
   - City
   - 'Music city '
   - Player
+  - SFX
   - UI
   BanksToLoad: []
   LiveUpdatePort: 9264

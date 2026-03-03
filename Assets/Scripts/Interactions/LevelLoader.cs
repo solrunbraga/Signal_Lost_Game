@@ -20,6 +20,8 @@ public class LevelLoader : MonoBehaviour
             guiObject.SetActive(true); 
             if (guiObject.activeSelf && Input.GetKeyDown(KeyCode.E))
             {
+                guiObject.SetActive(false); 
+
                 SceneManager.LoadScene(levelToLoad);
             }
         }

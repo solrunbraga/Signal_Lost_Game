@@ -312,7 +312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 24438.717, y: 4279.143}
+  m_AnchoredPosition: {x: 24473, y: 4290}
   m_SizeDelta: {x: 976.2819, y: 170.2404}
   m_Pivot: {x: 25, y: 25}
 --- !u!222 &6297181589767139796
@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 6414135717949579486}
   - component: {fileID: 6180537607720855937}
   - component: {fileID: 1211852409909579468}
+  - component: {fileID: 8405633517183116875}
   m_Layer: 5
   m_Name: DialougeCanvas
   m_TagString: Untagged
@@ -928,6 +929,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8405633517183116875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428796498414580188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac4a5e5499530a4aac501d4c6288984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DontDestroy
+  objectIndex: 3
 --- !u!1 &7210315112480684678
 GameObject:
   m_ObjectHideFlags: 0

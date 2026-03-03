@@ -7,6 +7,9 @@ public class EndTigger : MonoBehaviour
     public GameObject guiObject; //press E ui 
 
     private bool playerInside = false;
+    
+    [SerializeField]
+    private MonoBehaviour playerMovementScript; 
     private bool panelOpen = false;
 
     private void Start()
@@ -19,6 +22,8 @@ public class EndTigger : MonoBehaviour
     {
         if (playerInside && !panelOpen && Input.GetKeyDown(KeyCode.E))
         {
+            playerMovementScript.enabled = false;
+
             guiObject.SetActive(false); // Hide "(E)" prompt
             TryInteract();
         }
@@ -26,6 +31,7 @@ public class EndTigger : MonoBehaviour
         // Close "no key" panel with Space
         if (panelOpen && noKeyPanel.activeSelf && Input.GetKeyDown(KeyCode.Space))
         {
+            playerMovementScript.enabled = true;
             ClosePanels();
         }
     }

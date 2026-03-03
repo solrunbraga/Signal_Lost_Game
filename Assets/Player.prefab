@@ -170,6 +170,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b6dde1c6fee9fe4478fbb2c3a0c333b4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2904531058813690282}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b6dde1c6fee9fe4478fbb2c3a0c333b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3697184351815895685}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b6dde1c6fee9fe4478fbb2c3a0c333b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5404845842181423685}
   m_SourcePrefab: {fileID: 100100000, guid: b6dde1c6fee9fe4478fbb2c3a0c333b4, type: 3}
 --- !u!4 &5133298402963824619 stripped
 Transform:
@@ -309,3 +315,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c77ae893ac27c4fa6bde5d755f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::F_CharFst
+  currentTerrain: 0
+--- !u!114 &3697184351815895685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509858511289140561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -163316815
+      Data2: 1209075921
+      Data3: 1004048517
+      Data4: -1449251921
+    Path: event:/SFX/Char/footsteps
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &5404845842181423685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509858511289140561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac4a5e5499530a4aac501d4c6288984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DontDestroy
+  objectIndex: 0
