@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 3836168104192151095}
   - component: {fileID: 1831701447404112750}
   - component: {fileID: 2921801322323386050}
+  - component: {fileID: 3662745544024833730}
   m_Layer: 5
   m_Name: Option1
   m_TagString: Untagged
@@ -209,6 +210,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3662745544024833730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793843016331328668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1726444597
+      Data2: 1086533769
+      Data3: 1275332789
+      Data4: 1080006467
+    Path: event:/UI/button4
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 20
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2502225000709068915
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +1018,7 @@ GameObject:
   - component: {fileID: 6955309547051133830}
   - component: {fileID: 6534951594418346924}
   - component: {fileID: 2896803014439968229}
+  - component: {fileID: 1986074575485815454}
   m_Layer: 5
   m_Name: Option0
   m_TagString: Untagged
@@ -1107,3 +1140,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1986074575485815454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7863635574954183467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1726444597
+      Data2: 1086533769
+      Data3: 1275332789
+      Data4: 1080006467
+    Path: event:/UI/button4
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 20
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

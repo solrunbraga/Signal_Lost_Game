@@ -109,11 +109,14 @@
 	</object>
 	<object class="MultiSound" id="{9c25b963-f8d7-4761-a6a1-82fe7e78d003}">
 		<property name="volume">
-			<value>-17.5</value>
+			<value>-0.5</value>
 		</property>
 		<property name="playlistMode">
 			<value>1</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{6a55874a-8d59-470d-9a33-36163373414c}</destination>
+		</relationship>
 		<relationship name="sounds">
 			<destination>{0f222a3f-4317-4a4c-8d3a-9286a3b37944}</destination>
 			<destination>{2dd20b5f-da18-45da-ba1b-e71fe6b97324}</destination>
@@ -148,6 +151,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{6c3d9d5f-28b7-442c-aad8-104466572562}" />
 	<object class="MixerBusFader" id="{cbfd681a-4cc2-4bd9-9929-d793f1a00f02}" />
+	<object class="RandomizerModulator" id="{6a55874a-8d59-470d-9a33-36163373414c}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>5</value>
+		</property>
+	</object>
 	<object class="SingleSound" id="{0f222a3f-4317-4a4c-8d3a-9286a3b37944}">
 		<relationship name="audioFile">
 			<destination>{1c045173-a8e0-40ab-970f-3325506b58d5}</destination>
@@ -192,10 +203,10 @@
 			<value>0.879999995</value>
 		</property>
 		<property name="fftSize">
-			<value>1360</value>
+			<value>1260</value>
 		</property>
 		<property name="overlap">
-			<value>3.60000014</value>
+			<value>9.19999981</value>
 		</property>
 		<property name="maxChannels">
 			<value>1.39999998</value>
@@ -222,7 +233,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>-12</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{743db6a7-38f9-455b-8ee4-90c1f058097d}">

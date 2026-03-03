@@ -47,7 +47,7 @@ public class F_CharFst : MonoBehaviour
 
     private void PlayFootstep(int terrain)
     {
-        footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/Char/footsteps");
+        footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Char/footsteps");
         footsteps.setParameterByName("Terrain", terrain);
         footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         footsteps.start();
