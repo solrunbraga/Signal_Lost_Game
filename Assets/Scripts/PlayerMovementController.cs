@@ -24,7 +24,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField]
     private float movementSpeed = 5f;
     [SerializeField]
-    private float lookSpeed = 8f; 
+    private float lookSpeed = 6f; 
 
     [Header("Jump")]
     [SerializeField]
@@ -38,7 +38,7 @@ public class PlayerMovementController : MonoBehaviour
     private Transform groundCheckPoint; 
 
     [SerializeField]
-    private float groundCheckRadius = 0.2f;
+    private float groundCheckRadius = 0.3f;
 
     [SerializeField]
     private LayerMask groundLayer;
