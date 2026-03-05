@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BedSleep : MonoBehaviour
 {
+
     public GameObject pressEUI;        // UI that shows "(E)"
     public GameObject canvasToShow;    // Main UI canvas
     public GameObject objectToEnable;  // Object to make visible
@@ -11,9 +12,11 @@ public class BedSleep : MonoBehaviour
 
     void Start()
     {
+
         pressEUI.SetActive(false);
         canvasToShow.SetActive(false);
         objectToEnable.SetActive(false); // start hidden
+
     }
 
     void Update()
@@ -32,7 +35,7 @@ public class BedSleep : MonoBehaviour
             // Hide "(E)" prompt
             pressEUI.SetActive(false);
 
-            //siable gfurther interactions with bed 
+            // Disable further interactions with bed
             GetComponent<Collider>().enabled = false;
 
             enabled = false; //disable script no further interactions 

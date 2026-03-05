@@ -385,7 +385,7 @@ MonoBehaviour:
   - {fileID: 4148957550733042144}
   - {fileID: 8059835595284855962}
   - {fileID: 1667656969893840581}
-  lastItem: {fileID: 0}
+  lastItem: {fileID: 9220250583316740558, guid: f61475f699657744aa13272ec1e5bca3, type: 3}
   itemsNeeded: 4
 --- !u!1 &5245983507021990119
 GameObject:

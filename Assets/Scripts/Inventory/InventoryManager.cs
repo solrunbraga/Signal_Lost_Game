@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class InventoryManager : MonoBehaviour
     private bool menuActivated; 
     public static InventoryManager instance; 
     public ItemSlot[] itemSlot;
-    public GameObject lastItem; //last item to reveal 
-    
+    //public GameObject lastItem; //last item to reveal 
+    private FinalItem finalItem;
     
 
      private void Awake()
@@ -27,6 +28,35 @@ public class InventoryManager : MonoBehaviour
 
     private int itemsCollected = 0; 
     public int itemsNeeded = 4; //items requierd
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {   
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) //find last item in scene 
+    {
+        finalItem = FindFirstObjectByType<FinalItem>(FindObjectsInactive.Include);
+
+        if (finalItem != null)
+        {
+            Debug.Log("Final item found in scene.");
+
+            if (itemsCollected >= itemsNeeded)
+            {
+                finalItem.Reveal();
+            }
+        }
+        else
+        {
+            Debug.Log("No final item in this scene.");
+        }   
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -85,13 +115,26 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void RegisterFinalItem(FinalItem item)
+    {
+        finalItem = item;
+    }
+
     private void RevealLastItem()
     {
-        if(lastItem != null)
+        /*if(lastItem != null)
         {
             lastItem.SetActive(true); // The player can now pick it up
             Debug.Log("Last item is now revealed!");
+        }*/
+
+        if (finalItem != null)
+        {
+            finalItem.Reveal();
+            Debug.Log("Final item is now revealed!");
         }
+
+
     }
 
     //check if player has the required item to interact with pc in room and end the game
