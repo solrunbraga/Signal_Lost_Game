@@ -54,6 +54,7 @@ public class Item : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        guiObject.SetActive(false); 
         
     }
 }

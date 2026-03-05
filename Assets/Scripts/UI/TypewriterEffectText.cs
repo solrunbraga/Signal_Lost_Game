@@ -30,7 +30,7 @@ public class TypewriterEffectText : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        // 🔥 Text finished → enable choices
+        //Text finished → enable choices
         choicesPanel.SetActive(true);
     }
 }

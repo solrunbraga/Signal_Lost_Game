@@ -15,7 +15,7 @@ public class ItemToReveal : MonoBehaviour
         DialogueManager.GetInstance().ObserveVariable(inkVariableName, OnVariableChanged);
     }
 
-    // ✅ Signature must match Ink.Runtime.Story.VariableObserver
+    //Signature must match Ink.Runtime.Story.VariableObserver
     private void OnVariableChanged(string variableName, object newValue)
     {
         if ((bool)newValue)

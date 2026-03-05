@@ -12052,9 +12052,9 @@ MonoBehaviour:
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
-  OverrideAttenuation: 1
+  OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 24.809364
+  OverrideMaxDistance: 20
 --- !u!1001 &218281165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20426,7 +20426,7 @@ Transform:
   m_GameObject: {fileID: 897143160}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.56, y: 0.0921, z: 11.37}
+  m_LocalPosition: {x: 47.9, y: 0.0921, z: 3.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

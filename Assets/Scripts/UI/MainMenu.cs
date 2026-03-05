@@ -7,8 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        PlayerPrefs.DeleteAll(); // or DeleteKey("BedUsed")
-        PlayerPrefs.Save();
 
         Debug.Log("play button clicked!"); 
         SceneManager.LoadSceneAsync("HotelScene"); 
