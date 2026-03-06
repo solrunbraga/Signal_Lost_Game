@@ -24,11 +24,11 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField]
     private float movementSpeed = 5f;
     [SerializeField]
-    private float lookSpeed = 6f; 
+    private float lookSpeed = 7f; 
 
     [Header("Jump")]
     [SerializeField]
-    private float jumpStrength = 10f;
+    private float jumpStrength = 2f;
 
     [SerializeField]
     private float jumpDowntime = 1f; 
@@ -38,7 +38,7 @@ public class PlayerMovementController : MonoBehaviour
     private Transform groundCheckPoint; 
 
     [SerializeField]
-    private float groundCheckRadius = 0.3f;
+    private float groundCheckRadius = 0.2f;
 
     [SerializeField]
     private LayerMask groundLayer;
@@ -77,7 +77,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Move()
     {
-        float targetSpeed = (isRunning ? movementSpeed * 2f : movementSpeed) * move.magnitude; 
+        float targetSpeed = (isRunning ? movementSpeed * 3f : movementSpeed) * move.magnitude; 
         currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.fixedDeltaTime * 10f); 
 
         Vector3 forward = CameraTarget.forward;
